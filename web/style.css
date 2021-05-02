@@ -1,0 +1,921 @@
+/*
+@import "style.css";
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 23, 2018, 8:32:41 PM
+    Author     : DELL
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: crimson;
+    background-size: 100% 2160px;
+}
+
+#alink{
+    background: transparent;
+    border: none;
+    color: white;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    background: green;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#alink:hover{
+    opacity: 0.3;
+}
+
+.wrapper{
+    clear: both;
+    width: auto;
+    height: auto;
+}
+
+.light{
+    background: white;
+    color: black;
+}
+
+#header{
+    overflow: hidden;
+}
+
+#headertop img{
+    width: 1349px;
+}
+
+#menuwrap{
+    width: 900px;
+    overflow: hidden;
+    margin-left: 200px;
+    margin-right: 340px;
+}
+
+#menu{
+    margin: 0;
+    padding: 0;
+}
+
+#menu li{
+    list-style: none;
+    float: left;
+    padding-left: 40px;
+    font-size: 15px;
+    font-weight: 20%;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#menu li a{
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    background: transparent;
+    border: none;
+    color: white;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s all;  
+}
+
+#menu li a:hover{
+    color: cyan;
+}
+
+#menu li a:before{
+    content: '';
+    width: 60px;
+    position: absolute;
+    color: cyan;
+    border-bottom: 5px solid cyan;
+    bottom: 0;
+    right: 350px;
+    transition: 0.5s all;
+}
+
+#menu li a:hover:before{
+	right: 0;
+}
+
+#content{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 1300px;
+    width: auto;
+}
+
+#popupout{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#popupin{
+    height: 600px;
+    width: 900px;
+    bottom: 3%;
+    right: 15%;
+    position: fixed;
+    padding: 20px;
+    background: white;
+}
+
+#popupin div{
+    color: white;
+    background: grey;
+    width: 900px;
+    height: 80px;
+    overflow: hidden;
+    margin: 0px 0px 40px 0px;
+}
+
+#popupin table{
+    margin: 60px 100px 20px 100px;
+     border: 2px solid black;
+}
+
+#popupin td{
+    padding: 10px;
+}
+
+#popupin th{
+    padding: 10px;
+}
+
+#header{
+    width: auto;
+    height: auto;
+    margin: 20px 20px 20px 20px;
+}
+
+#header img{
+    float: left;
+    height: 140px;
+    margin-left: 40px;
+}
+
+#logo h1{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
+    margin: 10px 0px 0px -60px;
+    font-size: 50px;
+    float: right;
+    font-weight: 100px;
+}
+
+#logo{
+    margin-top: 50px;
+}
+
+#logo div{
+    float: left;
+    margin: 50px 200px 0px 50px;
+}
+
+#combo{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    padding-left: 30px;
+}
+
+#combo:hover{
+    border-color: cyan;
+    box-shadow: 0 0 8px 0 cyan;
+}
+
+
+#combo1{
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    padding-left: 30px;
+}
+
+#combo1:hover{
+    border-color: cyan;
+    box-shadow: 0 0 8px 0 cyan;
+}
+
+#textb{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    padding-left: 30px;
+}
+
+#textb:hover{
+    border-color: cyan;
+    box-shadow: 0 0 8px 0 cyan;
+}
+
+#button{
+    width: auto;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    background: green;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    padding: 10px 10px 10px 10px;
+    border-color: green;
+    font-weight: 100;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 10px;
+}
+
+#button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#adminpopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#studentpopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#img{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#imgcon{
+    width: auto;
+    height: auto;
+    margin: 50px 0px 0px 150px;
+}
+
+#imgcon #close{
+    margin-right: 180px;
+    overflow: auto;
+    color:white;
+}
+
+#imgcon #close:hover{
+    color: red;
+}
+
+#tilldate{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#facultypopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#timetablepopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#timetable{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#addtimetable{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#deletetimetable{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#modifytimetable{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#listtimetable{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#transferpopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#parentpopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#parentpopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#principalpopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#notificationpopup #a{
+    display: block;
+    background: grey;
+    color: white;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    margin: 200px 0px 0px 20px;
+    padding: 25px 0px 0 5px;
+    font-weight: 70;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: sans-serif;
+    border-radius: 10px;
+    float: right;
+}
+
+#notificationpopup #a:hover{
+    background: white;
+    color: black;
+    font-size: 20px;
+    border: 2px solid grey;
+}
+
+#subject{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#addfaculty{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#modifyfaculty{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#deletefaculty{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#listfaculty{
+    display: none;
+    position: fixed;
+    top: 100px;;
+    left: -200px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#addstudent{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#modifystudent{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#deletestudent{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#liststudent{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#attendancepopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#addattendancepopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#showattendancepopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#checkpopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#departmentpopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#loginerror{
+    background: white;
+    position: fixed;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    margin: 300px 100px 100px 450px;
+}
+
+#logcon h1{
+    color: black;
+    font-family: Cursive-SnellRoundhand;
+    font-size: 25px;
+    line-height: 34px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    text-shadow: 1px 1px 0 #fff0d8;
+    width: auto;
+}
+
+#textb1{
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 30px;
+}
+
+#textb1:hover{
+    border-color: cyan;
+    box-shadow: 0 0 8px 0 cyan;
+}
+
+#lista{
+    float: right;
+    height: 500px;
+    width: auto;
+    position: fixed;
+    overflow: auto;
+    background: white;
+}
+
+#logadmin{
+    height: auto;
+    width: auto;
+    bottom: 5%;
+    right: 15%;
+    position: fixed;
+    padding: 20px;
+}
+
+#logfaculty{
+    height: auto;
+    width: auto;
+    bottom: 5%;
+    right: 15%;
+    position: fixed;
+    padding: 20px;
+}
+
+#logstudent{
+    height: auto;
+    width: auto;
+    bottom: 5%;
+    right: 15%;
+    position: fixed;
+    padding: 20px;
+}
+
+#attstudent{
+    height: auto;
+    width: auto;
+    bottom: 5%;
+    right: 15%;
+    position: fixed;
+    padding: 20px;
+}
+
+#close{
+   font-size: 40px;
+   float: right;
+   margin-right: 10px;
+}
+
+#close:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#logcon1 a{
+    margin-top: 20px;
+    color: black;
+}
+
+#loglogo{
+    width: 300px;
+    height: 500px;
+    display: block;
+    background: grey;
+    float: left;
+    color: white;
+    margin-right: 5px;
+}
+
+#loglogo img{
+    margin: 50px 100px 50px 100px;
+    width: 100px;
+    height:100px;
+}
+
+#logcon{
+    float: right;
+    width: 500px;
+    height: 500px;
+    background: white;
+}
+
+#logcon1{
+    float: right;
+    height: auto;
+    width: auto;
+    bottom: 5%;
+    right: 10%;
+    position: fixed;
+    overflow: auto;
+    background: white;
+    color: black;
+}
+
+#logcon2{
+    float: right;
+    width: 700px;
+    height: 500px;
+    background: white;
+}
+
+#logcon2 table{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+     border: 2px solid black;
+}
+
+#logcon2 td{
+    padding: 10px;
+}
+
+
+#content table{
+    margin: 60px 100px 20px 100px;
+     border: 2px solid white;
+}
+
+#content td{
+    padding: 10px;
+}
+
+#content th{
+    padding: 10px;
+    font-weight: 10;
+    color: cyan;
+    font-size: 18px;
+}
+
+#logcon1 #close{
+    margin-top: -60px;
+}
+
+#list{
+    margin: 0;
+    padding: 0;
+}
+
+#list li{
+    list-style: none;
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: 20%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: -20px;
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-left: -20px;
+    padding-bottom: 10px;
+}
+
+#list li a{
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    color: white;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s all;  
+}
+
+#list li a:hover{
+    color: cyan;
+}
+
+#list li a:before{
+    content: '';
+    width: 60px;
+    position: absolute;
+    color: cyan;
+    border-bottom: 5px solid cyan;
+    bottom: 0;
+    right: 350px;
+    transition: 0.5s all;
+}
+
+#list li a:hover:before{
+	right: 0;
+}
+
+h1{
+    font-family: Cursive-SnellRoundhand;
+    font-size: 20px;
+    line-height: 34px;
+    margin: 0;
+    padding: 10px;
+    text-shadow: 1px 1px 0 #fff0d8;
+    width: auto;
+}
+
+#contenttop{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+#part1{
+    display: inline-block;
+    line-height: 21px;
+    margin: 0;
+    margin-top: 40px;
+    padding: 10px;
+    text-align: justify;
+    width: auto;
+    margin-left: 20px;
+}
+
+#part1 p{
+    font-family: 'Optima';
+    width: 600px;
+    height: auto;
+}
+
+#contenttop #figure{
+    float: right;
+    margin-right: 40px;
+    margin-top: 30px;
+    width: auto;
+    height: 282px;
+    border: 5px solid white;
+}
+
+#contentcenter{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    margin: 10px;
+    margin-left: 60px;
+}
+
+#contentcenter .first li{
+    width: 350px;
+    height: auto;
+    float: left;
+    list-style: none;
+    margin: 30px;
+}
+
+#contentcenter .first li img{
+    width: 345px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+#contentcenter .link{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#contentcenter .link:hover{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#footer{
+    width: auto;
+    height: auto;
+    color: white;
+    margin: 10px 10px 0 10px;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+#footer .foot li{
+    list-style: none;
+    float: left;
+    width: 380px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: cursive;
+    font-weight: 100;
+}
+
+#footer p{
+    font-size: 12px;
+}
